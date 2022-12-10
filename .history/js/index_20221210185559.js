@@ -3,6 +3,7 @@
   // 1. 验证用户是否已经登录
   const resp = await API.profile();
   let user = resp.data; // 先获取登录的用户信息，登录成功获取的是用户对象，登录失败获取的是null
+  console.log(user);
   if (!user) {
     // 如果得到的是null，说明登录失败（或者是用户没有登录）
     alert("未登录，请先登录");
